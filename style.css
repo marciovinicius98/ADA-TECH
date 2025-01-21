@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+}
+ 
+table, td, th {
+    border: 1px solid black;
+}
+
+table tr:first-child {
+    background-color: steelblue;
+    color: #fff;
+}
+
+table tr:nth-child(2n + 3) {
+    background-color: #AAA;
+    color: #fff;
+}
+
+table {
+    font-size: 2.4rem;
+    border-collapse: separate;
+}
+
+h1 {
+    color: #003aa5;
+    font-size: 9.6rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    text-align: center;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+/* a{
+    font-size: 2.4rem;
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover{
+    color: coral;
+} */
+
+.bg {
+    height: 20vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1690565914436-9a09ea223c38?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+ul, ol {
+    padding-left: 3.2rem;
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+.contact-list {
+    position: relative;
+}
+
+.contact-list h2 {
+    top: 0px;
+    position: sticky;
+    background-color: limegreen;
+}
+.boxes {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.box + span {
+    display: none;
+}
+
+.box {
+    flex: 30%;
+    height: 10rem;
+    width: 20rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #003aa5;
+    color: #fff;
+    border: 4px solid red;
+    display: inline-block;
+    border-radius: 0.4rem;
+    position: relative;
+}
+
+.box:nth-child(1) {
+    float: none;
+}
+
+span {
+    font-size: 1.8rem;
+}
+
+.box + span {
+    clear: both;
+}
+
+img {
+    height: 10rem;
+    width: 14rem;
+    object-fit: cover;
+}
+
+a {
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    margin: auto;
+    width: 50%;
+    text-decoration: none;
+    display: block;
+    transition: all .2s ease-in-out, background-color 1s ease-in-out;
+    text-align: center;
+}
+/* [data-anchor="products"] {
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    margin: auto;
+    width: 50%;
+    text-decoration: none;
+    display: block;
+    transition: all .2s ease-in-out, background-color 1s ease-in-out;
+    text-align: center;
+}  */
+/* [data-anchor="team"] {
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    margin: auto;
+    width: 50%;
+    text-decoration: none;
+    display: block;
+    transition: all .2s ease-in-out, background-color 1s ease-in-out;
+    text-align: center;
+} */
+
+[data-anchor="products"]:hover {
+    background-color: aqua;
+    color: #fff;
+    transform: scale(1.2);
+}
+[data-anchor="team"] {
+    margin-top: 2rem;
+    animation: pulse 2s infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% { 
+       transform: scale(1); 
+       opacity: a;
+    }
+    100% {
+        transform: scale(1.35); 
+        opacity: .6;
+    }
+}
+
+.spinner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-spinner {
+    margin-top: 3rem;
+    margin: 4rem;
+    font-size: 5rem;
+    color: blueviolet;
+    animation: load 1s infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
